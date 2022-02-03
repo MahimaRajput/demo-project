@@ -19,13 +19,7 @@ pipeline {
 		{
 			steps
 			{
-				script
-				{
-				         bat "copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\java-project-pipeline\\target\\JenkinsWar.jar C:\\apache-tomcat-10.0.16\\webapps\\JenkinsWar.jar"
-                	   		 powershell '''
-						Restart-Service -Name Tomcat8
-					'''
-				}
+				echo "deploy project"
 			}
 		}
     }
